@@ -131,7 +131,6 @@ def synth_own_sample(TEXT, vocoder_model, use_griffin_lim, speaker_embedding, fi
     file_name = file_name.translate(
         str.maketrans('', '', string.punctuation.replace('_', ''))) + f'_{file_add}.wav'
     out_path = os.path.join(OUT_PATH, file_name)
-    print(" > Saving output to {}".format(out_path))
     ap.save_wav(wav, out_path)
     return out_path
 
